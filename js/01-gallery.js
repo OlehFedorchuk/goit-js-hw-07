@@ -27,9 +27,9 @@ for (var i = 0; i < galleryItems.length; i += 1) {
 // Додавання фрагмента в DOM
 ulEl.appendChild(fragment);
 
-ulEl.addEventListener("click", onClickImg);
+ulEl.addEventListener("click", openModal);
 
-function onClickImg(event) {
+function openModal(event) {
   event.preventDefault();
 
   const instance = basicLightbox.create(`
@@ -38,3 +38,10 @@ function onClickImg(event) {
 
   instance.show();
 }
+
+// const closeModalOnEscape = (event) => {
+//   if (event.key === "Escape") {
+//     basicLightbox.close();
+//   }
+// };
+// document.addEventListener("keydown", closeModalOnEscape);
